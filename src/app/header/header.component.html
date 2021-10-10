@@ -1,1 +1,14 @@
-<p>header works!</p>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <a href="#">Recipe Book</a>
+            <a href="#"><button mat-button>Recipes</button></a>
+            <a href="#"><button mat-button>Shopping List</button></a>
+        </div>
+        <div>
+            <a href="#"><button mat-button [matMenuTriggerFor]="appMenu">Manage<mat-icon>keyboard_arrow_down</mat-icon></button></a>
+            <mat-menu #appMenu="matMenu">
+                <a href="#"><button mat-menu-item>Save Data</button></a>
+                <a href="#"><button mat-menu-item>Fetch Data</button></a>
+            </mat-menu>
+        </div>
+</mat-toolbar>
