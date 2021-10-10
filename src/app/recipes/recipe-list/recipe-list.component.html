@@ -1,1 +1,11 @@
-<app-recipe-item></app-recipe-item>
+<div fxLayout="column" fxLayoutAlign="space-around start">
+    <button mat-raised-button>New Recipe</button>
+    <hr>
+    <a href="#" *ngFor="let recipe of recipes">
+    <mat-card>
+            <mat-card-title fxLayoutAlign="center center">{{recipe.name}}</mat-card-title>
+            <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
+            <img mat-card-md-image src={{recipe.imagePath}}>
+    </mat-card>
+    </a>
+</div>
